@@ -1,0 +1,5 @@
+.Pet {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}

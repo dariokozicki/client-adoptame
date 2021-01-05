@@ -1,0 +1,24 @@
+.p-menubar{
+    height: 6vh;
+    border-radius: 0%;
+}
+
+.logo {
+    height: 80%;
+    display:inline;
+    margin-right: 0.5em
+}
+
+.titleImage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 6vh;
+    width: auto
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
