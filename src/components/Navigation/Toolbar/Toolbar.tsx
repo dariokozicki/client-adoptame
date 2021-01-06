@@ -35,8 +35,8 @@ const Toolbar = (props: any) => {
             model={items}
             start={()=>
                 <div className={classes.titleImage}>
-                    <img alt="Adoptame" className={classes.logo} src={logo}/>
-                    <h3 className={classes.title}>Adoptame</h3>
+                    <img alt="Adoptame!" className={classes.logo} src={logo}/>
+                    <h3 className={classes.title}>Adoptame!</h3>
                 </div>
             }
         />

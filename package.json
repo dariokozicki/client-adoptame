@@ -13,6 +13,7 @@
     "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
     "axios": "^0.21.1",
     "enzyme": "^3.11.0",
+    "flexboxgrid": "^6.3.1",
     "primeflex": "^2.0.0",
     "primeicons": "^4.1.0",
     "primereact": "^5.0.2",
