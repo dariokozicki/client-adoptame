@@ -6,6 +6,7 @@ const Pets = (props: {pets: PetProps[]}) => (
         <div className={classes.Pets}>
         {props.pets.map(pet => 
                         <Pet 
+                        key={pet.id}
                         pet={pet} />
                 )} 
         </div>

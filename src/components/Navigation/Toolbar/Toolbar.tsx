@@ -1,32 +1,32 @@
 import React from 'react'
 import { Menubar }  from 'primereact/menubar'
+import {MenuItem} from 'primereact/components/menuitem/MenuItem'
 import logo from "../../../logo.png"
 import classes from "./Toolbar.module.css"
 import "./Toolbar.css"
-
-type MenuItem = {
-    label: string,
-    icon: string | undefined,
-    items: (MenuItem)[] | undefined
-}
-
+import { withRouter } from 'react-router-dom'
 
 const Toolbar = (props: any) => {
+    const navigateToPage = (path: string) => {
+		console.log('Navigate to path ' + path);
+		props.history.push(path);
+	}
+
     const items: (MenuItem)[] = [
         {
             label: "Mascotas",
             icon: "pi pi-search",
-            items: undefined
+            command: () => navigateToPage("/")
         },
         {
             label: "Historial",
             icon: "pi pi-refresh",
-            items: undefined
+            command: () => navigateToPage("/history") 
         },
         {
             label: "Perfil",
             icon: "pi pi-user",
-            items: undefined
+            command: () => navigateToPage("/profile") 
         }
     ]    
     return (
@@ -43,4 +43,4 @@ const Toolbar = (props: any) => {
     )
 }
 
-export default Toolbar
+export default withRouter(Toolbar)

@@ -31,14 +31,14 @@ const getPets = async () => [ // mock, en el futuro deberia consultar al backend
         name: "Coco",
         img: "https://www.humanesociety.org/sites/default/files/styles/768x326/public/2020-07/dog-518805.jpg?h=e22bf01e&itok=uE4KGkuj",
         birthday: new Date("2020-01-01"),
-        id: 1,
+        id: 5,
         adopted: true
     },
     {
         name: "Max",
         img: "https://thecatandthedog.com/wp-content/uploads/2020/11/105992231-1561667465295gettyimages-521697453.jpeg",
         birthday: new Date("2021-01-01"),
-        id: 2,
+        id: 6,
         adopted: false
     }
 ]
