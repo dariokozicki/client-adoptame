@@ -1,5 +1,6 @@
 import React from 'react'
-import Pet, { PetProps } from "./Pet/Pet"
+import Pet from "./Pet/Pet"
+import {PetProps} from "../../api/PetsApi"
 import classes from "./Pets.module.css"
 
 const Pets = (props: {pets: PetProps[]}) => (

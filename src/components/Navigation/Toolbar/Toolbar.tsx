@@ -7,26 +7,22 @@ import "./Toolbar.css"
 import { withRouter } from 'react-router-dom'
 
 const Toolbar = (props: any) => {
-    const navigateToPage = (path: string) => {
-		console.log('Navigate to path ' + path);
-		props.history.push(path);
-	}
 
     const items: (MenuItem)[] = [
         {
             label: "Mascotas",
             icon: "pi pi-search",
-            command: () => navigateToPage("/")
+            command: () => props.history.push("/")
         },
         {
             label: "Historial",
             icon: "pi pi-refresh",
-            command: () => navigateToPage("/history") 
+            command: () => props.history.push("/history") 
         },
         {
             label: "Perfil",
             icon: "pi pi-user",
-            command: () => navigateToPage("/profile") 
+            command: () => props.history.push("/profile") 
         }
     ]    
     return (
@@ -34,7 +30,7 @@ const Toolbar = (props: any) => {
             className={classes["p-menubar"]} 
             model={items}
             start={()=>
-                <div className={classes.titleImage}>
+                <div className={classes.titleImage} onClick={()=>props.history.push("/")}>
                     <img alt="Adoptame!" className={classes.logo} src={logo}/>
                     <h3 className={classes.title}>Adoptame!</h3>
                 </div>

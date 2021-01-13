@@ -1,13 +1,6 @@
 import React from 'react'
 import classes from "./Pet.module.css"
-
-export type PetProps = {
-    name: string,
-    img: string,
-    birthday: Date,
-    id: number,
-    adopted: boolean
-}
+import {PetProps} from "../../../api/PetsApi"
 
 const Pet = (props: {pet: PetProps}) => {
     const age = new Date().getFullYear() - props.pet.birthday.getFullYear()

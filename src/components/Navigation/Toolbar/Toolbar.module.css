@@ -12,6 +12,7 @@
 .titleImage {
     display: flex;
     flex-direction: row;
+    cursor:pointer;
     align-items: center;
     height: 6vh;
     width: auto

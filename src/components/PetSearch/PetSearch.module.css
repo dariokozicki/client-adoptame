@@ -1,0 +1,8 @@
+.Search {
+  margin-bottom: 2em;
+  display: flex;
+}
+
+.SearchItem {
+  margin-right: 1em;
+}
