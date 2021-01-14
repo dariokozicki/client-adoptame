@@ -23,6 +23,11 @@ const Toolbar = (props: any) => {
             label: "Perfil",
             icon: "pi pi-user",
             command: () => props.history.push("/profile") 
+        },
+        {
+            label: "Iniciar Sesión",
+            icon: "pi pi-google",
+            command: () => props.history.push("/login")
         }
     ]    
     return (

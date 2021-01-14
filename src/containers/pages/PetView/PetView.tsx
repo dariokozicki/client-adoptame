@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {getPets, getPetsFiltered} from "../../../api/PetsApi"
 import {PetProps} from "../../../api/PetsApi"
 import Pets from "../../../components/Pets/Pets"
-import Search from '../../../components/PetSearch/PetSearch'
+import Search from '../../PetSearch/PetSearch'
 
 const PetView = (props: any) => {
     const [pets, setPets]= useState<PetProps[]>([])
