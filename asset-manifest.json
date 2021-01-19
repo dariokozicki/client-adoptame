@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/repository-name/static/css/main.3bea4c53.chunk.css",
+    "main.js": "/repository-name/static/js/main.30f9c7cb.chunk.js",
+    "main.js.map": "/repository-name/static/js/main.30f9c7cb.chunk.js.map",
+    "runtime-main.js": "/repository-name/static/js/runtime-main.b71b36df.js",
+    "runtime-main.js.map": "/repository-name/static/js/runtime-main.b71b36df.js.map",
+    "static/css/2.1a167c9a.chunk.css": "/repository-name/static/css/2.1a167c9a.chunk.css",
+    "static/js/2.ebf4a54c.chunk.js": "/repository-name/static/js/2.ebf4a54c.chunk.js",
+    "static/js/2.ebf4a54c.chunk.js.map": "/repository-name/static/js/2.ebf4a54c.chunk.js.map",
+    "static/js/3.16bb18b8.chunk.js": "/repository-name/static/js/3.16bb18b8.chunk.js",
+    "static/js/3.16bb18b8.chunk.js.map": "/repository-name/static/js/3.16bb18b8.chunk.js.map",
+    "index.html": "/repository-name/index.html",
+    "static/css/2.1a167c9a.chunk.css.map": "/repository-name/static/css/2.1a167c9a.chunk.css.map",
+    "static/css/main.3bea4c53.chunk.css.map": "/repository-name/static/css/main.3bea4c53.chunk.css.map",
+    "static/js/2.ebf4a54c.chunk.js.LICENSE.txt": "/repository-name/static/js/2.ebf4a54c.chunk.js.LICENSE.txt",
+    "static/media/primereact.min.css": "/repository-name/static/media/color.6441e63a.png",
+    "static/media/logo.469e9df7.png": "/repository-name/static/media/logo.469e9df7.png",
+    "static/media/primeicons.css": "/repository-name/static/media/primeicons.e61f3495.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b71b36df.js",
+    "static/css/2.1a167c9a.chunk.css",
+    "static/js/2.ebf4a54c.chunk.js",
+    "static/css/main.3bea4c53.chunk.css",
+    "static/js/main.30f9c7cb.chunk.js"
+  ]
+}
