@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/client-adoptame/static/css/main.3bea4c53.chunk.css",
-    "main.js": "/client-adoptame/static/js/main.30f9c7cb.chunk.js",
-    "main.js.map": "/client-adoptame/static/js/main.30f9c7cb.chunk.js.map",
-    "runtime-main.js": "/client-adoptame/static/js/runtime-main.500a410c.js",
-    "runtime-main.js.map": "/client-adoptame/static/js/runtime-main.500a410c.js.map",
+    "main.css": "/client-adoptame/static/css/main.b42ffeb5.chunk.css",
+    "main.js": "/client-adoptame/static/js/main.ebb54bf6.chunk.js",
+    "main.js.map": "/client-adoptame/static/js/main.ebb54bf6.chunk.js.map",
+    "runtime-main.js": "/client-adoptame/static/js/runtime-main.80336e47.js",
+    "runtime-main.js.map": "/client-adoptame/static/js/runtime-main.80336e47.js.map",
     "static/css/2.93160ed4.chunk.css": "/client-adoptame/static/css/2.93160ed4.chunk.css",
-    "static/js/2.ebf4a54c.chunk.js": "/client-adoptame/static/js/2.ebf4a54c.chunk.js",
-    "static/js/2.ebf4a54c.chunk.js.map": "/client-adoptame/static/js/2.ebf4a54c.chunk.js.map",
-    "static/js/3.16bb18b8.chunk.js": "/client-adoptame/static/js/3.16bb18b8.chunk.js",
-    "static/js/3.16bb18b8.chunk.js.map": "/client-adoptame/static/js/3.16bb18b8.chunk.js.map",
+    "static/js/2.6c0f7095.chunk.js": "/client-adoptame/static/js/2.6c0f7095.chunk.js",
+    "static/js/2.6c0f7095.chunk.js.map": "/client-adoptame/static/js/2.6c0f7095.chunk.js.map",
+    "static/js/3.ada98e65.chunk.js": "/client-adoptame/static/js/3.ada98e65.chunk.js",
+    "static/js/3.ada98e65.chunk.js.map": "/client-adoptame/static/js/3.ada98e65.chunk.js.map",
     "index.html": "/client-adoptame/index.html",
     "static/css/2.93160ed4.chunk.css.map": "/client-adoptame/static/css/2.93160ed4.chunk.css.map",
-    "static/css/main.3bea4c53.chunk.css.map": "/client-adoptame/static/css/main.3bea4c53.chunk.css.map",
-    "static/js/2.ebf4a54c.chunk.js.LICENSE.txt": "/client-adoptame/static/js/2.ebf4a54c.chunk.js.LICENSE.txt",
+    "static/css/main.b42ffeb5.chunk.css.map": "/client-adoptame/static/css/main.b42ffeb5.chunk.css.map",
+    "static/js/2.6c0f7095.chunk.js.LICENSE.txt": "/client-adoptame/static/js/2.6c0f7095.chunk.js.LICENSE.txt",
     "static/media/primereact.min.css": "/client-adoptame/static/media/color.6441e63a.png",
     "static/media/logo.469e9df7.png": "/client-adoptame/static/media/logo.469e9df7.png",
     "static/media/primeicons.css": "/client-adoptame/static/media/primeicons.e61f3495.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.500a410c.js",
+    "static/js/runtime-main.80336e47.js",
     "static/css/2.93160ed4.chunk.css",
-    "static/js/2.ebf4a54c.chunk.js",
-    "static/css/main.3bea4c53.chunk.css",
-    "static/js/main.30f9c7cb.chunk.js"
+    "static/js/2.6c0f7095.chunk.js",
+    "static/css/main.b42ffeb5.chunk.css",
+    "static/js/main.ebb54bf6.chunk.js"
   ]
 }
