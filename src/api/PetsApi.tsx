@@ -138,7 +138,7 @@ const getPets: () => Promise<PetProps[]> = async ()=> [ // mock, en el futuro de
 ]
 
 
-const getPetsFiltered: (petModel: Partial<PetProps>) => Promise<PetProps[]> = async (petModel) => {
+const getPetsFiltered: (petModel: Partial<PetProps>, searchItem: string) => Promise<PetProps[]> = async (petModel, searchItem) => {
     return getPets().then(pets => pets.filter(pet => 
         Object.keys(petModel).every((key: string) =>{ 
             const valueModel = (petModel as any)[key]
@@ -151,18 +151,12 @@ const getPetsFiltered: (petModel: Partial<PetProps>) => Promise<PetProps[]> = as
                     return value === valueModel
                 default: return true
             }
-        })
-    ))
-}
-
-const getPetsSimplified = async (searchItem: string) => {
-    const pets = await getPets()
-    return pets.filter(pet => 
+        }) ||
         Object.keys(pet).some(key => {
             const value: string = "" + (pet as any)[key]
             return value.toLowerCase().includes(searchItem)
         })
-    )
+    ))
 }
 
 const getSpecies = async () => [
@@ -171,4 +165,4 @@ const getSpecies = async () => [
     "Gato"
 ]
 
-export {getPetsFiltered, getSpecies, getPetsSimplified}
+export {getPetsFiltered, getSpecies}

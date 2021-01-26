@@ -3,7 +3,7 @@ import {PetProps} from "../../../api/PetsApi"
 import Pets from "../../../components/Pets/Pets"
 import Search from '../../PetSearch/PetSearch'
 import {connect} from 'react-redux'
-import { searchPets, searchPetsSimplified } from '../../../store/actions/pets'
+import { searchPets } from '../../../store/actions/pets'
 
 const PetsView = (props: any) => {
     return (
@@ -22,8 +22,7 @@ const mapStateToProps = (state: any) => {
 
 const mapDispatchToProps = (dispatch: any) => {
     return {
-        onSearch: (petModel: Partial<PetProps>) => dispatch(searchPets(petModel)),
-        onSearchSimplified: (searchItem: string) => dispatch(searchPetsSimplified(searchItem))
+        onSearch: (petModel: Partial<PetProps>, searchItem: string) => dispatch(searchPets(petModel, searchItem)),
     }
 }
 

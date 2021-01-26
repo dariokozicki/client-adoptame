@@ -5,7 +5,7 @@ import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown'
 
-const PetSearch = ({onSearch, onSearchSimplified}: any) => {
+const PetSearch = ({onSearch}: any) => {
     const [petModel, setPetModel] = useState<Partial<PetProps>>({})
     const [adopted, setAdopted] = useState<string | null>(null)
     const [species, setSpecies] = useState<string[]>([])
@@ -19,7 +19,7 @@ const PetSearch = ({onSearch, onSearchSimplified}: any) => {
     return (
         <div className={classes.Search}>
             <InputText
-                id="searchBar" className={classes.SearchItem} placeholder="Buscar" onChange={(e) => onSearchSimplified(e.currentTarget.value)}    
+                id="searchBar" className={classes.SearchItem} placeholder="Buscar" onChange={(e) => onSearch(petModel, e.currentTarget.value)}    
             />
             {advanced && 
             <Fragment>
