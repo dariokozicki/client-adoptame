@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import {PetProps} from "../../../api/PetsApi"
 import Pets from "../../../components/Pets/Pets"
 import Search from '../../PetSearch/PetSearch'
@@ -7,10 +7,10 @@ import { searchPets } from '../../../store/actions/pets'
 
 const PetsView = (props: any) => {
     return (
-        <div>
+        <Fragment>
             <Search onSearch={props.onSearch} onSearchSimplified={props.onSearchSimplified} />
             <Pets pets={props.pets}/>
-        </div>
+        </Fragment>
     )
 }
 
