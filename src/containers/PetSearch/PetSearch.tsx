@@ -1,32 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import {AutoComplete} from 'primereact/autocomplete'
-import {getBreeds, PetProps, getSpecies} from '../../api/PetsApi'
+import {PetProps, getSpecies} from '../../api/PetsApi'
 import classes from "./PetSearch.module.css"
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown'
 
-const PetSearch = (props: any) => {
+const PetSearch = ({onSearch}: any) => {
     const [petModel, setPetModel] = useState<Partial<PetProps>>({})
-    const [breeds, setBreeds] = useState<string[]>([])
-    const [filteredBreeds, setFilteredBreeds] = useState<string[]>([])
     const [adopted, setAdopted] = useState<string | null>(null)
     const [species, setSpecies] = useState<string[]>([])
 
-    const searchBreed = (event: any) => {
-        setFilteredBreeds(
-            !event.query.trim().length ? 
-                [...breeds] :
-                breeds.filter((breed) => {
-                    return breed.toLowerCase().startsWith(event.query.toLowerCase());
-                })
-        )
-    }
-
     useEffect(() => {
-        getBreeds().then(setBreeds)
         getSpecies().then(setSpecies)
-    }, [])
+        onSearch(petModel)
+    }, [petModel, onSearch])
 
     return (
         <div className={classes.Search}>
@@ -39,17 +26,6 @@ const PetSearch = (props: any) => {
                     setPetModel({...petModel, species: e.target.value}) 
                 }}
             />
-            <AutoComplete 
-                placeholder="Raza"
-                className={classes.SearchItem}
-                value={petModel.breed} 
-                suggestions={filteredBreeds} 
-                dropdown 
-                completeMethod={searchBreed} 
-                onChange={(e) => setPetModel({
-                    ...petModel,
-                    breed: e.value
-                })} />
             <InputText 
                 id="petName" className={classes.SearchItem} value={petModel.name} placeholder="Nombre" onChange={(e) => setPetModel({...petModel, name: e.currentTarget.value})}
             />
@@ -62,7 +38,7 @@ const PetSearch = (props: any) => {
                 }}
             />
             <Button label="Search" className={[classes.SearchItem, "p-button-success"].join(" ")}
-                onClick={() => props.setPetsFromModel(petModel) }
+                onClick={() => onSearch(petModel) }
             />
         </div>
     )

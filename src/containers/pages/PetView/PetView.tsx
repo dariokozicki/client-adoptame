@@ -1,26 +1,29 @@
-import React, { useEffect, useState } from 'react'
-import {getPets, getPetsFiltered} from "../../../api/PetsApi"
+import React from 'react'
 import {PetProps} from "../../../api/PetsApi"
 import Pets from "../../../components/Pets/Pets"
 import Search from '../../PetSearch/PetSearch'
+import {connect} from 'react-redux'
+import { searchPets } from '../../../store/actions/pets'
 
 const PetView = (props: any) => {
-    const [pets, setPets]= useState<PetProps[]>([])
-    
-    useEffect(() => {
-        getPets().then(p => setPets(p))
-    }, [])
-
-    const setPetsFromModel = (petModel: Partial<PetProps>) => {
-        getPetsFiltered(petModel).then(pets => setPets(pets))
-    }
-
     return (
         <div>
-            <Search pets={pets} setPetsFromModel={setPetsFromModel} />
-            <Pets pets={pets}/>
+            <Search onSearch={props.onSearch} />
+            <Pets pets={props.pets}/>
         </div>
     )
 }
 
-export default PetView
+const mapStateToProps = (state: any) => {
+    return {
+        pets: state.petStore.pets
+    }
+}
+
+const mapDispatchToProps = (dispatch: any) => {
+    return {
+        onSearch: (petModel: Partial<PetProps>) => dispatch(searchPets(petModel))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PetView)

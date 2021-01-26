@@ -1,0 +1,1 @@
+export const SEARCH_PETS = 'SEARCH_PETS';
