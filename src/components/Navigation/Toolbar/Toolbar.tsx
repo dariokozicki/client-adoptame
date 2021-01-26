@@ -20,6 +20,11 @@ const Toolbar = (props: any) => {
             command: () => props.history.push("/favorites") 
         },
         {
+            label: "Refugios",
+            icon: "pi pi-home",
+            command: () => props.history.push("/refuges")
+        },
+        {
             label: "Perfil",
             icon: "pi pi-user",
             command: () => props.history.push("/profile") 

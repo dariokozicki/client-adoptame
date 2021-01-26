@@ -44,10 +44,10 @@ const PetSearch = ({onSearch, onSearchSimplified}: any) => {
                     }}
                 />
             </Fragment>}
+            <Button className={[classes.SearchItem, "p-button-help","p-button-rounded"].join(" ")} icon="pi pi-sliders-v" onClick={() => setAdvanced(!advanced)}  />
             <Button label="Search" className={[classes.SearchItem, "p-button-help"].join(" ")}
                 onClick={() => onSearch(petModel) }
             />
-            <Button className="p-button-help p-button-rounded" icon="pi pi-sliders-v" onClick={() => setAdvanced(!advanced)}  />
         </div>
     )
 }

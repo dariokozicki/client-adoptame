@@ -155,11 +155,13 @@ const getPetsFiltered: (petModel: Partial<PetProps>) => Promise<PetProps[]> = as
     ))
 }
 
-const getPetsSimplified = (searchItem: string) => {
-    return getPets()
-        .then(pets => 
-            pets.filter(pet => Object.keys(pet).some(key => ("" + (pet as any)[key] ).includes(searchItem))
-        )
+const getPetsSimplified = async (searchItem: string) => {
+    const pets = await getPets()
+    return pets.filter(pet => 
+        Object.keys(pet).some(key => {
+            const value: string = "" + (pet as any)[key]
+            return value.toLowerCase().includes(searchItem)
+        })
     )
 }
 

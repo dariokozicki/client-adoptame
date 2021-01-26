@@ -16,10 +16,8 @@ type PetsReducerAction =  {
 }
 
 const PetsReducer = (state = initialState, action: PetsReducerAction) => {
-    console.log("pets reducer", action, state)
     switch(action.type){
         case actionTypes.SEARCH_PETS:
-            console.log("llego aca")
             return {
                 ...state,
                 pets: action.payload.pets
