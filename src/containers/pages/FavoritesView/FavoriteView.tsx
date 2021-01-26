@@ -1,7 +1,7 @@
 
 const FavoriteView = (props: any) => {
     return (
-        <div>Aca va el historial</div>
+        <div>Aca van los favoritos</div>
     )
 }
 

@@ -6,7 +6,6 @@ export type PetProps = {
     id: number,
     birthday: Date,
     adopted: boolean,
-    breed: string,
     species: string,
     sex: string,
     neutered: boolean,
@@ -156,10 +155,18 @@ const getPetsFiltered: (petModel: Partial<PetProps>) => Promise<PetProps[]> = as
     ))
 }
 
+const getPetsSimplified = (searchItem: string) => {
+    return getPets()
+        .then(pets => 
+            pets.filter(pet => Object.keys(pet).some(key => ("" + (pet as any)[key] ).includes(searchItem))
+        )
+    )
+}
+
 const getSpecies = async () => [
     "Todos",
     "Perro",
     "Gato"
 ]
 
-export {getPetsFiltered, getSpecies}
+export {getPetsFiltered, getSpecies, getPetsSimplified}
