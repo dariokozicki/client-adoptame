@@ -1,8 +1,60 @@
 .Search {
-  margin-bottom: 2em;
-  display: flex;
+	margin-bottom: 2em;
+	display: flex;
+}
+/* Cambie todos los seacrh items para poder tener mas control en cada tipo */
+/* .SearchItem {
+	margin-right: 1em;
+	background: #fff;
+	border: 1px solid #cad1d7;
+	border-radius: 4px;
+	padding: 0 1rem;
+	color: #777;
 }
 
-.SearchItem {
-  margin-right: 1em;
+.SearchItem:hover {
+	background: #988fff;
+	color: #fff;
+}*/
+
+.SearchInput {
+	margin-right: 1em;
+	background: #fff;
+	border: 1px solid #cad1d7;
+	border-radius: 4px;
+	padding: 0.5rem 1rem;
+	color: #777;
+}
+
+.SearchInput::placeholder {
+	color: #777;
+}
+
+.SearchInput:focus {
+	border: 1px solid red;
+}
+
+.SearchDrop {
+	margin-right: 1em;
+	background: #988fff;
+	border: 1px solid #cad1d7;
+	border-radius: 4px;
+	padding: 0 1rem;
+	color: #777;
+}
+
+.SearchDrop::placeholder {
+	color: #777;
+}
+
+.SearchButton {
+	margin-right: 1em;
+	background: #fff;
+	border: 1px solid #cad1d7;
+	border-radius: 4px;
+	padding: 0.5rem 1rem;
+	color: #777;
+}
+.SearchButton:enabled:hover {
+	background: #988fff;
 }

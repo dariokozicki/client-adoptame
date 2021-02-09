@@ -1,25 +1,36 @@
-.p-menubar{
-    height: 6vh;
-    border-radius: 0%;
+.p-menubar {
+	height: 7vh;
+	border-radius: 0%;
+	background: #988fff;
+	border: none;
+	padding: 0 1em;
+}
+
+.p-menubar li span {
+	padding: 0 0.2em;
+}
+
+.p-menubar li a {
+	color: #fff;
 }
 
 .logo {
-    height: 80%;
-    display:inline;
-    margin-right: 0.5em
+	height: 55%;
+	display: inline;
+	margin-right: 0.5em;
 }
 
 .titleImage {
-    display: flex;
-    flex-direction: row;
-    cursor:pointer;
-    align-items: center;
-    height: 6vh;
-    width: auto
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+	align-items: center;
+	height: 6vh;
+	width: auto;
 }
 
 .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
