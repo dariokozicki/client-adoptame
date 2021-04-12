@@ -4,10 +4,12 @@ import Pets from "../../../components/Pets/Pets"
 import Search from '../../PetSearch/PetSearch'
 import {connect} from 'react-redux'
 import { searchPets } from '../../../store/actions/pets'
+import Navbar from '../../../components/Navigation/Navbar';
 
 const PetsView = (props: any) => {
     return (
         <Fragment>
+            <Navbar/>
             <Search onSearch={props.onSearch} onSearchSimplified={props.onSearchSimplified} />
             <Pets pets={props.pets}/>
         </Fragment>

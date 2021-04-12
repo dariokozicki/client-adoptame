@@ -1,4 +1,4 @@
-import 'primereact/resources/themes/arya-green/theme.css';
+/* import 'primereact/resources/themes/arya-green/theme.css';*/
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import Layout from './components/Layout/Layout';

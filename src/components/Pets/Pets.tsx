@@ -2,6 +2,7 @@ import React from 'react'
 import Pet from "./Pet/Pet"
 import {PetProps} from "../../api/PetsApi"
 import classes from "./Pets.module.css"
+import {  StyledPets } from './StylePets';
 
 const Pets = (props: {pets: PetProps[]}) => {
 
@@ -16,9 +17,9 @@ const Pets = (props: {pets: PetProps[]}) => {
     }
 
     return (
-        <div className={classes.Pets}>
+        <StyledPets className={classes.Pets}>
             {showPets()} 
-        </div>
+        </StyledPets>
     )
 }
 

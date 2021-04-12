@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Pet.module.css';
 import { PetProps } from '../../../api/PetsApi';
+import {  StyledCard, ImageContainer } from './styles'
 
 const Pet = (props: { pet: PetProps }) => {
 	const age = new Date().getFullYear() - props.pet.birthday.getFullYear();
@@ -10,23 +11,22 @@ const Pet = (props: { pet: PetProps }) => {
 	);
 	return (
 		<div className={petClasses.join(' ')}>
-			<div className={classes.PetImageContainer}>
+			<ImageContainer>
 				<img
 					alt={props.pet.name}
 					src={props.pet.img}
-					className={classes.PetImage}
 				></img>
-			</div>
-			<div className={classes.container}>
+			</ImageContainer>
+			<StyledCard>
 				<div>
-					<h3>{props.pet.name}</h3>
+					<h3 >{props.pet.name}</h3>
 					<h4>Edad: {age + ' ' + (age > 1 ? 'años' : 'año')}</h4>
 				</div>
 				<div>
 					<h3>{props.pet.adopted ? 'Adoptado 😍' : 'Disponible 🔥'}!</h3>
 					<h4>Sexo: M</h4>
 				</div>
-			</div>
+			</StyledCard>
 		</div>
 	);
 };
