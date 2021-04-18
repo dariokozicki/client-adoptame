@@ -61,14 +61,14 @@ const PetSearch = ({ onSearch }: any) => {
 				</Fragment>
 			)}
 			<Button
-				className={[classes.SearchButton].join(' ')}
-				icon="pi pi-sliders-v"
-				onClick={() => setAdvanced(!advanced)}
-			/>
-			<Button
 				label="Search"
 				className={[classes.SearchButton].join(' ')}
 				onClick={() => onSearch(petModel)}
+			/>
+			<Button
+				className={[classes.SearchButton].join(' ')}
+				icon="pi pi-sliders-v"
+				onClick={() => setAdvanced(!advanced)}
 			/>
 		</div>
 	);
