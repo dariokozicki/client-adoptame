@@ -1,28 +1,37 @@
 import styled from 'styled-components'
 
 export const Nav = styled.div`
-    padding: 0 2rem;
+    box-sizing:border-box;
+    padding: 1rem 2rem;
+    width:100%;
+    margin:0 auto;
+    background: #988fff;
+`;
+
+export const NavContent = styled.div`
+    width:95%;
+    margin:0 auto;
+
     display: flex;
     justify-content: space-between;
     align-items:center;
     flex-wrap: wrap;
     background: #988fff;
-    width:100%;
-    margin-bottom: 1rem;
 `;
 
 export const Hamburguer = styled.div`
     display:none;
     cursor:pointer;
-    width:2rem;
     div{
-        color: white;  
+        color: white;
+        font-size:1.5rem;
         &:hover{
             color: #544aaa;
         }
     }
     @media (max-width: 768px){
             display: flex;
+             
         }
 `;
 
@@ -31,7 +40,7 @@ export const Menu = styled.div`
     display:flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+   /*  position: relative; */
     @media (max-width: 768px){
         overflow:hidden;
         flex-direction:column;
