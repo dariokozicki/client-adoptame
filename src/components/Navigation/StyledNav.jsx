@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Nav = styled.div`
-    padding: 0 1rem;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items:center;
@@ -12,18 +12,18 @@ export const Nav = styled.div`
 `;
 
 export const Hamburguer = styled.div`
-display:none;
-cursor:pointer;
-width:2rem;
-div{
-    color: white;  
-    &:hover{
-        color: #544aaa;
+    display:none;
+    cursor:pointer;
+    width:2rem;
+    div{
+        color: white;  
+        &:hover{
+            color: #544aaa;
+        }
     }
-}
-@media (max-width: 768px){
-        display: flex;
-    }
+    @media (max-width: 768px){
+            display: flex;
+        }
 `;
 
 

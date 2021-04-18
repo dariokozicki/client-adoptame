@@ -1,5 +1,6 @@
 import React ,{ useState }from 'react'
 import {  Nav, Hamburguer, Menu, MenuLink, Logo } from './StyledNav'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [ isOpen, setisOpen] = useState(false)
@@ -12,11 +13,11 @@ const Navbar = () => {
                  <div>&#x2630;</div>
             </Hamburguer>
             <Menu isOpen={isOpen}>
-                <MenuLink href="">Mascotas</MenuLink>
-                <MenuLink href="">Favoritos</MenuLink>
-                <MenuLink href="">Refugios</MenuLink>
-                <MenuLink href="">Perfil</MenuLink>
-                <MenuLink href="">Login</MenuLink>
+                <Link to="/">Mascotas</Link>
+                <Link to="/favorites">Favoritos</Link>
+                <MenuLink to="/refuges">Refugios</MenuLink>
+                <Link to="/profile">Perfil</Link>
+                <Link to="/login">Login</Link>
             </Menu>
         </Nav>
     )
