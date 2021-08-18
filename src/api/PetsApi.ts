@@ -14,7 +14,7 @@ export type PetProps = {
     shelterId: number
 }
 
-const getPets: () => Promise<PetProps[]> = async ()=> [ // mock, en el futuro deberia consultar al backend
+export const getPets: () => Promise<PetProps[]> = async ()=> [ // mock, en el futuro deberia consultar al backend
     {
         name: "Toto",
         img: "https://post.greatist.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg",
