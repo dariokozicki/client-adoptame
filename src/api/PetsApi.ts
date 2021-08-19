@@ -151,10 +151,10 @@ const getPetsFiltered: (petModel: Partial<PetProps>, searchItem: string) => Prom
                     return value === valueModel
                 default: return true
             }
-        }) ||
+        }) &&
         Object.keys(pet).some(key => {
             const value: string = "" + (pet as any)[key]
-            return value.toLowerCase().includes(searchItem)
+            return !searchItem || value.toLowerCase().includes(searchItem)
         })
     ))
 }

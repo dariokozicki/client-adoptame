@@ -1,5 +1,5 @@
 import React ,{ useState }from 'react'
-import {  Nav, Hamburguer, Menu, MenuLink, Logo, NavContent } from './StyledNav'
+import {  Nav, Hamburguer, Menu, Logo, NavContent } from './StyledNav'
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
                 <Menu isOpen={isOpen}>
                     <Link to="/">Mascotas</Link>
                     <Link to="/favorites">Favoritos</Link>
-                    <MenuLink to="/refuges">Refugios</MenuLink>
+                    <Link to="/refuges">Refugios</Link>
                     <Link to="/profile">Perfil</Link>
                     <Link to="/login">Login</Link>
                 </Menu>

@@ -2,7 +2,6 @@ import React, { Fragment, useEffect, useState } from 'react';
 import { PetProps, getSpecies } from '../../api/PetsApi';
 import classes from './PetSearch.module.css';
 import { Button } from 'primereact/button';
-import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
 
 const PetSearch = ({ onSearch }: any) => {
@@ -10,19 +9,25 @@ const PetSearch = ({ onSearch }: any) => {
 	const [adopted, setAdopted] = useState<string | null>(null);
 	const [species, setSpecies] = useState<string[]>([]);
 	const [advanced, setAdvanced] = useState<boolean>(false);
+	const [searchKeyword, setSearchKeyword] = useState<string | undefined>('');
 
 	useEffect(() => {
 		getSpecies().then(setSpecies);
-		onSearch(petModel);
-	}, [petModel, onSearch]);
+	}, []);
+
 
 	return (
 		<div className={classes.Search}>
-			<InputText
+			<input
 				id="searchBar"
 				className={classes.SearchInput}
 				placeholder="Buscar"
-				onChange={(e) => onSearch(petModel, e.currentTarget.value)}
+				value={searchKeyword}
+				onChange={(e) => setSearchKeyword(e.currentTarget.value)}
+				onKeyPress={(event) => {
+					if(event.key === 'Enter') 
+						onSearch(petModel, searchKeyword)
+				}}
 			/>
 			{advanced && (
 				<Fragment>
@@ -35,7 +40,7 @@ const PetSearch = ({ onSearch }: any) => {
 							setPetModel({ ...petModel, species: e.target.value });
 						}}
 					/>
-					<InputText
+					<input
 						id="petName"
 						className={classes.SearchInput}
 						value={petModel.name}
@@ -47,15 +52,15 @@ const PetSearch = ({ onSearch }: any) => {
 					<Dropdown
 						id="adopted"
 						value={adopted}
-						options={['Adoptado', 'Disponible']}
+						options={['Todos', 'Adoptado', 'Disponible']}
 						className={classes.SearchDrop}
 						placeholder={'Adopción'}
-						onChange={(e) => {
+						onChange={({target:{value}}) => {
 							setPetModel({
 								...petModel,
-								adopted: e.target.value === 'Adoptado',
+								adopted: value === 'Todos' ? undefined : value === 'Adoptado',
 							});
-							setAdopted(e.target.value);
+							setAdopted(value);
 						}}
 					/>
 				</Fragment>
@@ -63,7 +68,7 @@ const PetSearch = ({ onSearch }: any) => {
 			<Button
 				label="Search"
 				className={[classes.SearchButton].join(' ')}
-				onClick={() => onSearch(petModel)}
+				onClick={() => onSearch(petModel, searchKeyword)}
 			/>
 			<Button
 				className={[classes.SearchButton].join(' ')}
